@@ -22,6 +22,6 @@ export default class ConfigurationVersions extends Request {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
   async upload(url: string, data: any): Promise<any> {
-    return await axios.put(url, data)
+    return await axios.put(url, data, { maxBodyLength: 500 * 1000000 }) // 500MB
   }
 }
