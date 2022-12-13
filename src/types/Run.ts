@@ -72,4 +72,12 @@ export interface RunAttributes {
     | 'canceled'
     | 'force_canceled'
   terraformVersion: string
+  actions: RunAttributesActions
+}
+
+export interface RunAttributesActions {
+  isCancelable: boolean
+  isConfirmable: boolean
+  isDiscardable: boolean
+  isForceCancelable: boolean
 }
